@@ -13,7 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from "@angular/http";
 import { ProductProvider } from '../providers/product/product';
 import { ProductDetailPage } from "../pages/product-detail/product-detail"
-
+import { FilterModalPage } from "../pages/filter-modal/filter-modal";
 @NgModule({
   declarations: [
     MyApp,
@@ -21,6 +21,7 @@ import { ProductDetailPage } from "../pages/product-detail/product-detail"
     ContactPage,
     HomePage,
     ProductDetailPage,
+    FilterModalPage,
     TabsPage
   ],
   imports: [
@@ -32,6 +33,7 @@ import { ProductDetailPage } from "../pages/product-detail/product-detail"
   entryComponents: [
     MyApp,
     ProductDetailPage,
+    FilterModalPage,
     AboutPage,
     ContactPage,
     HomePage,
