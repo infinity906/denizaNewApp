@@ -12,12 +12,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { HttpModule } from "@angular/http";
 import { ProductProvider } from '../providers/product/product';
+import { ProductDetailPage } from "../pages/product-detail/product-detail"
+
 @NgModule({
   declarations: [
     MyApp,
     AboutPage,
     ContactPage,
     HomePage,
+    ProductDetailPage,
     TabsPage
   ],
   imports: [
@@ -28,6 +31,7 @@ import { ProductProvider } from '../providers/product/product';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    ProductDetailPage,
     AboutPage,
     ContactPage,
     HomePage,

@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card *ngFor="let product of allproducts">
+  <ion-card *ngFor="let product of allproducts" (click)="gotoProductDetailPage(product)">
     <img [src]="product.image"/>
   </ion-card>
 </ion-content>

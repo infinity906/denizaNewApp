@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { ProductProvider } from "../../providers/product/product";
+import {ProductDetailPage } from "../product-detail/product-detail";
 
 @Component({
   selector: 'page-home',
@@ -21,6 +22,12 @@ export class HomePage {
       this.allproducts = response;
     });
 
+  }
+
+  gotoProductDetailPage(product){
+    this.navCtrl.push(ProductDetailPage, {
+      productDetails: product
+    })
   }
 
 }
