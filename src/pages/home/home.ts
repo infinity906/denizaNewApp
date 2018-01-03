@@ -9,6 +9,7 @@ import { ProductProvider } from "../../providers/product/product";
   templateUrl: 'home.html'
 })
 export class HomePage {
+  public allproducts = [];
 
   constructor(private productProvider: ProductProvider, private http: Http, public navCtrl: NavController) {
 
@@ -16,7 +17,9 @@ export class HomePage {
 
   ionViewDidLoad(){
     this.productProvider.getProducts()
-    .subscribe(response => console.log(response))
+    .subscribe((response) => {
+      this.allproducts = response;
+    });
 
   }
 
