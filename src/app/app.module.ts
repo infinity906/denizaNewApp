@@ -27,8 +27,10 @@ import { FilterModalPage } from "../pages/filter-modal/filter-modal";
   imports: [
     HttpModule,
     BrowserModule,
-    IonicModule.forRoot(MyApp)
-  ],
+    IonicModule.forRoot(MyApp,{
+      tabsPlacement:"top"
+    },
+  )],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
