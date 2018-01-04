@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController, NavController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the FilterModalPage page.
@@ -15,10 +15,21 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FilterModalPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  public femaleselected = true;
+  public maleselected = true;
+
+  constructor(private viewController: ViewController, public navCtrl: NavController, public navParams: NavParams) {
+this.femaleselected = this.navParams.get("femaleselected");
+this.maleselected = this.navParams.get("maleselected");
   }
-closeModal(){
-  this.navCtrl.pop();
+
+  closeModal(){
+    let filterstate = {
+      femaleselected: this.femaleselected,
+      maleselected: this.maleselected
+    }
+    this.viewController.dismiss(filterstate);
+  //this.navCtrl.pop();
 }
   ionViewDidLoad() {
     console.log('ionViewDidLoad FilterModalPage');
